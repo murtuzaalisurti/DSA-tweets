@@ -1,4 +1,4 @@
-# DSA-tweets
+# Data Structures & Algorithms Tweets
 
 ## Daily learnings of [#DSAwithKunal](https://twitter.com/hashtag/DSAwithKunal?src=hashtag_click) on twitter!
 ### Sharing my journey [here](https://murtuzaalisurtisurti.github.io/DSA-tweets)!
