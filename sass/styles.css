@@ -65,7 +65,7 @@ h4 a:hover {
   color: #00acee;
 }
 
-.tweets {
+.tweets, .tweets-skeleton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,9 +80,63 @@ h4 a:hover {
   padding: 0 3rem;
 }
 
-.tweet {
+.tweet, .tweet-skeleton {
   width: 30rem;
   margin: 0 1.5rem;
+}
+
+.tweet-skeleton {
+  border: 0.05rem solid #bebebe;
+  border-radius: 1rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+}
+
+.tweet-skeleton .img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  -webkit-animation: tweet-skeleton 1s linear infinite alternate;
+          animation: tweet-skeleton 1s linear infinite alternate;
+}
+
+.tweet-skeleton .content-1, .tweet-skeleton .content-2 {
+  height: 25%;
+  margin-top: 1rem;
+}
+
+.tweet-skeleton .line {
+  height: 15%;
+  margin: 0.5rem 0;
+  width: 100%;
+  border-radius: 0.3rem;
+  background-color: #d1d1d1;
+  -webkit-animation: tweet-skeleton 1s linear infinite alternate;
+          animation: tweet-skeleton 1s linear infinite alternate;
+}
+
+.tweet-skeleton .line:last-child {
+  width: 75%;
+}
+
+@-webkit-keyframes tweet-skeleton {
+  0% {
+    background-color: #d1d1d1;
+  }
+  100% {
+    background-color: #f3f3f3;
+  }
+}
+
+@keyframes tweet-skeleton {
+  0% {
+    background-color: #d1d1d1;
+  }
+  100% {
+    background-color: #f3f3f3;
+  }
 }
 
 footer {

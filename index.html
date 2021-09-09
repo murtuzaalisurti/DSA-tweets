@@ -16,7 +16,22 @@
     <h1>DSA Daily Learnings</h1>
     <h4>Inspired by <a href="https://www.youtube.com/c/KunalKushwaha">Kunal Kushwaha</a> & <a href="https://commclassroom.org/">Community Classroom</a></h4>
     <main>
-        <div class="tweets">
+        <div class="tweets-skeleton">
+            <div class="tweet-skeleton">
+                <div class="img"></div>
+                <div class="content-1">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="content-2">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tweets" style="visibility: hidden; display: none;">
             <div class="tweet">
                 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/Day5?src=hash&amp;ref_src=twsrc%5Etfw">#Day5</a> of learning <a href="https://twitter.com/hashtag/DSAwithKunal?src=hash&amp;ref_src=twsrc%5Etfw">#DSAwithKunal</a>!<br>Today&#39;s notes include: Time Complexity of Linear Search Algorithm in <a href="https://twitter.com/hashtag/java?src=hash&amp;ref_src=twsrc%5Etfw">#java</a>.<br>Inspired by: <a href="https://twitter.com/kunalstwt?ref_src=twsrc%5Etfw">@kunalstwt</a> &amp; <a href="https://twitter.com/commclassroom?ref_src=twsrc%5Etfw">@commclassroom</a> <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/60Daysofdsa?src=hash&amp;ref_src=twsrc%5Etfw">#60Daysofdsa</a> <a href="https://t.co/18sxDpjRpO">pic.twitter.com/18sxDpjRpO</a></p>&mdash; Murtuzaali Surti (@murtuza_surti) <a href="https://twitter.com/murtuza_surti/status/1434552019281330177?ref_src=twsrc%5Etfw">September 5, 2021</a></blockquote>
             </div>
@@ -61,6 +76,17 @@
       
         return t;
       }(document, "script", "twitter-wjs"));</script>
-    <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+      <script>
+          const tweets_skeleton = document.querySelector('.tweets-skeleton');
+          const tweet_skeleton = document.querySelector('.tweet-skeleton');
+          for (let i = 0; i < 5; i++) {
+            tweets_skeleton.append(tweet_skeleton.cloneNode(true));
+          }
+  
+          setTimeout(() => {
+            document.querySelector(".tweets").style = "visibility: hidden;";
+            tweets_skeleton.style = "display: none;";
+          }, 4000);
+      </script>
 </body>
 </html>
