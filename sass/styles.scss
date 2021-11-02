@@ -82,11 +82,25 @@ h4 a:hover{
     margin-bottom: 2rem;
     padding: 1.5rem;
 }
+.img-and-logo-contain{
+    display: flex;
+    justify-content: space-between;
+}
 .tweet-skeleton .img{
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
     background-color: rgb(209, 209, 209);
+    opacity: 0.3;
+    animation: tweet-skeleton 1s linear infinite alternate;
+}
+.logo{
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    color: rgb(209, 209, 209);
+    opacity: 0.3;
     animation: tweet-skeleton 1s linear infinite alternate;
 }
 .tweet-skeleton .content-1, .tweet-skeleton .content-2{
@@ -99,6 +113,7 @@ h4 a:hover{
     width: 100%;
     border-radius: 0.3rem;
     background-color: rgb(209, 209, 209);
+    opacity: 0.3;
     animation: tweet-skeleton 1s linear infinite alternate;
 }
 .tweet-skeleton .line:last-child{
@@ -106,10 +121,10 @@ h4 a:hover{
 }
 @keyframes tweet-skeleton {
     0%{
-        background-color: rgb(209, 209, 209);
+        opacity: 0.3;
     }
     100%{
-        background-color: rgb(243, 243, 243);
+        opacity: 0.8;
     }
 }
 footer{
