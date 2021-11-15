@@ -1,24 +1,28 @@
+//declaring variables
 const tweets_skeleton = document.querySelector('.tweets-skeleton');
 const tweet_skeleton = document.querySelector('.tweet-skeleton');
 const tweets_container = document.querySelector(".tweets");
 const all_tweets = document.querySelectorAll(".tweets .tweet");
 const load_btn = document.querySelector(".see-more");
 
+//appending tweets skeleton
 for (let i = 0; i < 5; i++) {
     tweets_skeleton.append(tweet_skeleton.cloneNode(true));
 }
 
+//setting id's for all tweets
 for(let j = 0; j < all_tweets.length; j++){
     all_tweets[j].id = `tweet-${j+1}`;
 
+    // not showing more than 6 tweets for the first time
     if(j > 5){
         all_tweets[j].style = `display: none`;
     }
 }
 
-
 let visible_tweet_count = 0;
 function count_visible_tweets(){
+    //counting visible tweets and updating the counter
     for(let j = 0; j < all_tweets.length; j++){
         if(all_tweets[j].style.display != 'none'){
             visible_tweet_count++;
@@ -41,18 +45,25 @@ load_btn.addEventListener("click", () => {
             all_tweets[k].style = "";
         }
     }
+
+    //resetting visible tweet count at every click on 'see more' button
     visible_tweet_count = 0;
     count_visible_tweets();
 
-    console.log(visible_tweet_count)
-    if(visible_tweet_count == Number(17)){
-        console.log(1);
+    // if the visible tweet count is equal to total no. of tweets, then hide the 'see more' btn
+    if(visible_tweet_count == Number(all_tweets.length)){
         load_btn.parentElement.style.display = 'none';
     }
 })
 
+//display actual tweets after specified miliseconds
 setTimeout(() => {
+    // reveal 'see more' btn
     load_btn.parentElement.style = "";
+
+    //show tweets
     document.querySelector(".tweets").style = "visibility: hidden;";
+
+    //hide tweet skeletons
     tweets_skeleton.style = "display: none;";
 }, 5000);
