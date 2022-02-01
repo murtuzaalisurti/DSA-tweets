@@ -4,6 +4,7 @@
   "description": "Watch DSA videos by [Kunal Kushwaha on YouTube](https://www.youtube.com/c/KunalKushwaha)!\r Find my notes on github [here](https://github.com/murtuzaalisurti/DSA-notes).",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,9 +20,15 @@
   },
   "homepage": "https://github.com/murtuzaalisurti/DSA-tweets#readme",
   "dependencies": {
+    "axios": "^0.25.0",
+    "dotenv": "^15.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^6.0.13",
-    "nodemon": "^2.0.15"
+    "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.15",
+    "tweets.ts": "^1.0.3",
+    "twitter-v2": "^1.1.0",
+    "twitter.js": "^0.11.0"
   }
 }
